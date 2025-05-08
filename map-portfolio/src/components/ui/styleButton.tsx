@@ -5,7 +5,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ name }) => {
-    return <button className='border border-[#F4EBEC] px-8 rounded-sm text-[#F4EBEC] hover:cursor-pointer'>{name}</button>;
+    return <button className='border-1 px-8 rounded-sm hover:cursor-pointer'>{name}</button>;
 };
 
 export default Button;

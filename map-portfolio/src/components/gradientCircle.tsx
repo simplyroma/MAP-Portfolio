@@ -17,7 +17,7 @@ const GlowCircle: React.FC<GlowCircleProps> = ({ size = 200 }) => {
             box-shadow: 0 0 0 rgba(255, 60, 0, 0);
           }
           50% {
-            box-shadow: 0 0 10px 6px rgba(255, 60, 0, 0.2);
+            box-shadow: 0 0 8px 6px rgba(255, 60, 0, 0.3);
           }
         }
 

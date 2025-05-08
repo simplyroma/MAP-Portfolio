@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Poppins } from "next/font/google";
 
 import localFont from "next/font/local";
+
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -21,7 +23,6 @@ const universe = localFont({
   variable: "--font-universe",
 });
 
-
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -38,11 +39,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${universe.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider attribute="class" enableSystem defaultTheme="system">{children}</ThemeProvider>
       </body>
     </html>
   );

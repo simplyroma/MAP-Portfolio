@@ -1,22 +1,18 @@
-import Image from "next/image";
-import { Flower2 } from "lucide-react";
-import { Moon } from "lucide-react";
-import Button from "./components/button";
-import GradientCircle from "./components/gradientCircle";
+import { ThemeToggle } from "@/components/themeToggle";
+import { Button } from "../components/ui/button"
+import GradientCircle from "../components/gradientCircle";
 
 export default function Home() {
   return (
-    <main className="grid grid-cols-4 gap-4 p-8 mx-10 2xl:mx-135 xl:mx-90 lg:mx-60 sm:mx-30 mt-32 font-extralight text-[#F4EBEC]">
+    <main className="grid grid-cols-4 gap-4 p-8 mx-10 2xl:mx-135 xl:mx-90 lg:mx-60 sm:mx-30 mt-32 font-extralight">
       <div className="col-span-4">
         {/* NAVBAR */}
-        <div className="flex justify-between mb-6">
+        <div className="flex justify-between mb-2">
           {/* ICON */}
-          <div>
-            <Moon />
-          </div>
+          <ThemeToggle />
 
           {/* NAV PAGES */}
-          <div className="flex gap-4 univers font-light">
+          <div className="flex gap-4 univers font-extralight">
             <h1>home</h1>
             <h1>credits</h1>
           </div>
@@ -33,18 +29,23 @@ export default function Home() {
 
         {/* ABOUT BUTTON */}
         <div className="mt-6">
-          <Button name="about" />
+        <Button> about </Button>
+          
         </div>
 
-        <div className="flex gap-4 mt-6 univers text-lg">
+        <div className="flex gap-4 mt-12 univers text-lg">
           <div className="content-center align-middle">
             <GradientCircle size={20}/>
           </div>
-          <div>Latest: January</div>
+          <div>Latest: March</div>
         </div>
 
         <div>
-          <h1 className="mt-2 text-2xl md:text-4xl font-medium">Submissions</h1>
+          <h1 className="mt-2 text-2xl md:text-4xl poppins font-medium">Submissions</h1>
+        </div>
+
+        <div>
+          
         </div>
       </div>
 
