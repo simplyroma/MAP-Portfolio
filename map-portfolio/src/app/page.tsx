@@ -1,10 +1,12 @@
 import { ThemeToggle } from "@/components/themeToggle";
-import { Button } from "../components/ui/button"
+import { Button } from "../components/ui/button";
 import GradientCircle from "../components/gradientCircle";
+import { Poster } from "../components/ui/poster";
+import { GridToggle } from "@/components/gridToggle";
 
 export default function Home() {
   return (
-    <main className="grid grid-cols-4 gap-4 p-8 mx-10 2xl:mx-135 xl:mx-90 lg:mx-60 sm:mx-30 mt-32 font-extralight">
+    <main className="grid grid-cols-4 gap-4 p-8 mx-10 2xl:mx-120 xl:mx-90 lg:mx-60 sm:mx-30 mt-32 font-extralight">
       <div className="col-span-4">
         {/* NAVBAR */}
         <div className="flex justify-between mb-2">
@@ -29,23 +31,56 @@ export default function Home() {
 
         {/* ABOUT BUTTON */}
         <div className="mt-6">
-        <Button> about </Button>
-          
+          <Button> about </Button>
         </div>
 
         <div className="flex gap-4 mt-12 univers text-lg">
           <div className="content-center align-middle">
-            <GradientCircle size={20}/>
+            <GradientCircle size={20} />
           </div>
           <div>Latest: March</div>
         </div>
 
-        <div>
-          <h1 className="mt-2 text-2xl md:text-4xl poppins font-medium">Submissions</h1>
+        <div className="flex univers text-lg justify-between">
+          <h1 className="mt-2 text-2xl md:text-4xl poppins font-medium">
+            Submissions
+          </h1>
+
+         {/* GRID TOGGLE */}
+          <div className="ml-auto mt-2">
+            <GridToggle />
+          </div>
         </div>
 
+        {/* IMAGE GRID */}
         <div>
-          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mt-6">
+            <Poster
+              src="/images/portfolio7.png"
+              alt="MAP 1st Submission"
+              className="w-full h-full"
+            />
+            <Poster
+              src="/images/portfolio6.png"
+              alt="MAP 1st Submission"
+              className="w-full h-full"
+            />
+            <Poster
+              src="/images/portfolio5.png"
+              alt="Portfolio Image 2"
+              className="w-full h-full"
+            />
+            <Poster
+              src="/images/portfolio4.jpg"
+              alt="Portfolio Image 3"
+              className="w-full h-full"
+            />
+            <Poster
+              src="/images/portfolio3.png"
+              alt="Portfolio Image 3"
+              className="w-full h-full"
+            />
+          </div>
         </div>
       </div>
 
